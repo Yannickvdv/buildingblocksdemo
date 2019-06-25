@@ -1,0 +1,52 @@
+<form>
+  <div class="form-row align-items-center">
+    <div class="col-auto">
+      <mat-form-field>
+        <input
+          matInput
+          placeholder="Start date"
+          [matDatepicker]="startDatePicker"
+        />
+        <mat-datepicker-toggle
+          matSuffix
+          [for]="startDatePicker"
+        ></mat-datepicker-toggle>
+        <mat-datepicker #myDatepicker></mat-datepicker>
+      </mat-form-field>
+    </div>
+
+    <div class="col-auto">
+      <mat-form-field>
+        <input matInput placeholder="End date" [matDatepicker]="endDatePicker" />
+        <mat-datepicker-toggle
+          matSuffix
+          [for]="endDatePicker"
+        ></mat-datepicker-toggle>
+        <mat-datepicker #myDatepicker></mat-datepicker>
+      </mat-form-field>
+    </div>
+
+    <div class="col-auto">
+      <mat-form-field>
+        <input matInput placeholder="Input" />
+      </mat-form-field>
+    </div>
+
+    <div class="col-auto">
+      <mat-form-field>
+        <input
+          matInput
+          placeholder="Amount"
+          type="number"
+          class="example-right-align"
+        />
+        <span matPrefix>€&nbsp;</span>
+        <span matSuffix>.00</span>
+      </mat-form-field>
+    </div>
+    <div class="col-auto">
+      <button></button>
+    </div>
+    <div class="col-auto"></div>
+  </div>
+</form>
