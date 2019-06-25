@@ -4,13 +4,16 @@ Buildingblocksdemo is a basic front-end application that displays user data retr
 Through the use of [json-server](https://github.com/typicode/json-server) this app creates a mock backend to simulate a real backend. This is where the front-end gets its data from, through HTTP requests.
 
 ## How to use it
+First of all clone the repository. Then run `npm install` inside the main directory.
+
 Run `npm run mock-backend` to start the backend. This will create a server running on `http://localhost:3000/`. It uses the data found in [mockdata.json](/mockdata.json).
 
 Run `npm run start` to start the webserver. Navigate to `http://localhost:4200/` to see the website.
 
 ## Example
 
-![Example](https://i.imgur.com/1RRrMEG.gif)
+![Example](https://i.imgur.com/x8eufeU.gif)
+*Note: ShareX (screen capture tool) does not put the cursor in the correct place.*  
 
 ## Improvements
 
