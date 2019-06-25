@@ -8,7 +8,7 @@
       <th scope="col">Is active</th>
     </tr>
   </thead>
-  <tbody *ngIf="users.length > 0; else noUserFound">
+  <tbody *ngIf="users && users.length > 0; else noUserFound">
     <tr *ngFor="let user of users">
       <td>{{ user.name.first }} {{ user.name.second }}</td>
       <td>€ {{ user.balance }}</td>
