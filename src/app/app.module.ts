@@ -24,7 +24,7 @@ import {
   SearchFieldsComponent,
   ChartsSidebarComponent,
   GendersBarChartComponent,
-  BalanceLineChartComponent
+  ActivityDoughnutChartComponent
 } from './components';
 
 @NgModule({
@@ -35,7 +35,7 @@ import {
     SearchFieldsComponent,
     ChartsSidebarComponent,
     GendersBarChartComponent,
-    BalanceLineChartComponent
+    ActivityDoughnutChartComponent
   ],
   imports: [
     BrowserModule,

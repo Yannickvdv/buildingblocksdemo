@@ -10,21 +10,17 @@ import { ChartType } from 'chart.js';
 import { MultiDataSet, Label } from 'ng2-charts';
 
 @Component({
-  selector: 'app-balance-line-chart',
-  templateUrl: './balance-line-chart.component.html',
-  styleUrls: ['./balance-line-chart.component.scss']
+  selector: 'app-activity-doughnut-chart',
+  templateUrl: './activity-doughnut-chart.component.html',
+  styleUrls: ['./activity-doughnut-chart.component.scss']
 })
-export class BalanceLineChartComponent implements OnInit, OnChanges {
+export class ActivityDoughnutChartComponent implements OnInit, OnChanges {
   @Input() users: User[];
 
   constructor() {}
 
-  public doughnutChartLabels: Label[] = [
-    'Download Sales',
-    'In-Store Sales',
-    'Mail-Order Sales'
-  ];
-  public doughnutChartData: MultiDataSet = [];
+  public doughnutChartLabels: Label[] = [];
+  public doughnutChartData = [];
   public doughnutChartType: ChartType = 'doughnut';
 
   ngOnInit() {}
@@ -35,6 +31,7 @@ export class BalanceLineChartComponent implements OnInit, OnChanges {
     this.getDataAndLabels(this.users);
   }
 
+  // Not the most dynamic. Could be better giving into account more possibilities
   getDataAndLabels(users: User[]) {
     let isActive = 0;
     let isInactive = 0;
@@ -43,7 +40,7 @@ export class BalanceLineChartComponent implements OnInit, OnChanges {
     users.forEach(user => {
       if (user.isActive) {
         isActive++;
-      } else if (!user.isActive) {
+      } else if (user.isActive === false) {
         isInactive++;
       } else {
         // If for whatever reason the boolean isn't true or false,
@@ -53,7 +50,7 @@ export class BalanceLineChartComponent implements OnInit, OnChanges {
       }
     });
 
-    this.doughnutChartData = [[isActive], [isInactive], [unknown]];
+    this.doughnutChartData = [isActive, isInactive, unknown];
     this.doughnutChartLabels = ['Active', 'Inactive', 'Unknown'];
   }
 }

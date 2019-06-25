@@ -4,7 +4,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { SearchFieldsComponent } from './dashboard/search-fields/search-fields.component';
 import { ChartsSidebarComponent } from './dashboard/charts-sidebar/charts-sidebar.component';
 import { GendersBarChartComponent } from './dashboard/charts-sidebar/genders-bar-chart/genders-bar-chart.component';
-import { BalanceLineChartComponent } from './dashboard/charts-sidebar/balance-line-chart/balance-line-chart.component';
+import { ActivityDoughnutChartComponent } from './dashboard/charts-sidebar/activity-doughnut-chart/activity-doughnut-chart.component';
 
 export {
     AppComponent,
@@ -13,5 +13,5 @@ export {
     SearchFieldsComponent,
     ChartsSidebarComponent,
     GendersBarChartComponent,
-    BalanceLineChartComponent
+    ActivityDoughnutChartComponent
 };
