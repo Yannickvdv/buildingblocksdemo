@@ -9,9 +9,9 @@
     </tr>
   </thead>
   <tbody>
-    <tr ng-repeat="user in users">
+    <tr *ngFor="let user of users;">
       <td>{{ user.name.first }} {{ user.name.second }}</td>
-      <td>{{ user.balance }}</td>
+      <td>€ {{ user.balance }}</td>
       <td>{{ user.gender }}</td>
       <td>{{ user.registered }}</td>
       <td>{{ user.isActive }}</td>
