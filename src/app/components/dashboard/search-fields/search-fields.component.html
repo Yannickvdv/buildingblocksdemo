@@ -1,34 +1,24 @@
-<form>
+<form [formGroup]="searchFieldsForm" (ngSubmit)="onSubmit()">
   <div class="form-row align-items-center">
+    <div class="col-auto">
+      <mat-form-field>
+        <input matInput placeholder="First name" formControlName="firstName" />
+      </mat-form-field>
+    </div>
+
     <div class="col-auto">
       <mat-form-field>
         <input
           matInput
           placeholder="Start date"
+          formControlName="startDate"
           [matDatepicker]="startDatePicker"
         />
         <mat-datepicker-toggle
           matSuffix
           [for]="startDatePicker"
         ></mat-datepicker-toggle>
-        <mat-datepicker #myDatepicker></mat-datepicker>
-      </mat-form-field>
-    </div>
-
-    <div class="col-auto">
-      <mat-form-field>
-        <input matInput placeholder="End date" [matDatepicker]="endDatePicker" />
-        <mat-datepicker-toggle
-          matSuffix
-          [for]="endDatePicker"
-        ></mat-datepicker-toggle>
-        <mat-datepicker #myDatepicker></mat-datepicker>
-      </mat-form-field>
-    </div>
-
-    <div class="col-auto">
-      <mat-form-field>
-        <input matInput placeholder="Input" />
+        <mat-datepicker #startDatePicker></mat-datepicker>
       </mat-form-field>
     </div>
 
@@ -36,7 +26,24 @@
       <mat-form-field>
         <input
           matInput
-          placeholder="Amount"
+          placeholder="End date"
+          formControlName="endDate"
+          [matDatepicker]="endDatePicker"
+        />
+        <mat-datepicker-toggle
+          matSuffix
+          [for]="endDatePicker"
+        ></mat-datepicker-toggle>
+        <mat-datepicker #endDatePicker></mat-datepicker>
+      </mat-form-field>
+    </div>
+
+    <div class="col-auto">
+      <mat-form-field>
+        <input
+          matInput
+          placeholder="Max balance"
+          formControlName="maxBalance"
           type="number"
           class="example-right-align"
         />
@@ -44,9 +51,23 @@
         <span matSuffix>.00</span>
       </mat-form-field>
     </div>
+
     <div class="col-auto">
-      <button></button>
+      <mat-form-field>
+        <input
+          matInput
+          placeholder="Min balance"
+          formControlName="minBalance"
+          type="number"
+          class="example-right-align"
+        />
+        <span matPrefix>€&nbsp;</span>
+        <span matSuffix>.00</span>
+      </mat-form-field>
     </div>
-    <div class="col-auto"></div>
+
+    <div class="col-auto">
+      <button type="submit" class="btn btn-secondary">Submit</button>
+    </div>
   </div>
 </form>

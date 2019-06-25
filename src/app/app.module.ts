@@ -4,6 +4,8 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { ChartsModule } from 'ng2-charts';
 
 // Normally you might want to seperate this into its own NgModule
 import {
@@ -21,25 +23,30 @@ import {
   DashboardComponent,
   SearchFieldsComponent
 } from './components';
+import { ChartsSidebarComponent } from './components/dashboard/charts-sidebar/charts-sidebar.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     UserListComponent,
     DashboardComponent,
-    SearchFieldsComponent
+    SearchFieldsComponent,
+    ChartsSidebarComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     BrowserAnimationsModule,
+    FormsModule,
+    ReactiveFormsModule,
     MatButtonModule,
     MatCheckboxModule,
     MatDatepickerModule,
     MatNativeDateModule,
     MatFormFieldModule,
-    MatInputModule
+    MatInputModule,
+    ChartsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

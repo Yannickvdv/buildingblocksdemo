@@ -8,8 +8,8 @@
       <th scope="col">Is active</th>
     </tr>
   </thead>
-  <tbody>
-    <tr *ngFor="let user of users;">
+  <tbody *ngIf="users.length > 0; else noUserFound">
+    <tr *ngFor="let user of users">
       <td>{{ user.name.first }} {{ user.name.second }}</td>
       <td>€ {{ user.balance }}</td>
       <td>{{ user.gender }}</td>
@@ -17,4 +17,15 @@
       <td>{{ user.isActive }}</td>
     </tr>
   </tbody>
+  <ng-template #noUserFound>
+    <blockquote class="blockquote text-center">
+      <p class="mb-0">
+        Wow, look! Nothing!
+      </p>
+      <footer class="blockquote-footer">
+        The REST api
+      </footer>
+    </blockquote>
+    
+  </ng-template>
 </table>
