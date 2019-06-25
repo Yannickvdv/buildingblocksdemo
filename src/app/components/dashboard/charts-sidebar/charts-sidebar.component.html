@@ -1,12 +1,2 @@
-<div style="display: block">
-  Users per gender
-  <canvas
-    baseChart
-    [datasets]="barChartData"
-    [labels]="barChartLabels"
-    [options]="barChartOptions"
-    [legend]="barChartLegend"
-    [chartType]="barChartType"
-  >
-  </canvas>
-</div>
+<app-genders-bar-chart [users]="users"></app-genders-bar-chart>
+<app-balance-line-chart [users]="users"></app-balance-line-chart>

@@ -21,9 +21,11 @@ import {
   AppComponent,
   UserListComponent,
   DashboardComponent,
-  SearchFieldsComponent
+  SearchFieldsComponent,
+  ChartsSidebarComponent,
+  GendersBarChartComponent,
+  BalanceLineChartComponent
 } from './components';
-import { ChartsSidebarComponent } from './components/dashboard/charts-sidebar/charts-sidebar.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +33,9 @@ import { ChartsSidebarComponent } from './components/dashboard/charts-sidebar/ch
     UserListComponent,
     DashboardComponent,
     SearchFieldsComponent,
-    ChartsSidebarComponent
+    ChartsSidebarComponent,
+    GendersBarChartComponent,
+    BalanceLineChartComponent
   ],
   imports: [
     BrowserModule,
