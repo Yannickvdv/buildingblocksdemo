@@ -6,12 +6,13 @@ import { HttpClient } from '@angular/common/http';
 // Some query filters. Could be made more dynamic.
 // lte = Lesser Than or Equal to
 // gte = Greater Than or Equal to
-class UserParams {
-  gender: User['gender'];
-  balance_lte: number;
-  balance_gte: number;
-  registered_lte: Date;
-  registered_gte: Date;
+export class UserParams {
+  'name.first'?: string;
+  gender?: User['gender'];
+  balance_lte?: number;
+  balance_gte?: number;
+  registered_lte?: number;
+  registered_gte?: number;
 }
 
 @Injectable({
