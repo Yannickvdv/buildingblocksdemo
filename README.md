@@ -1,27 +1,25 @@
 # Buildingblocksdemo
+Buildingblocksdemo is a basic front-end application that displays user data retrieved from a server through HTTP requests. It displays simple data while allowing the user through filter said data on certain parameters. It also displays basic charts which it gathers directly from the data and updates it real-time once filtered.
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.8.
+Through the use of [json-server](https://github.com/typicode/json-server) this app creates a mock backend to simulate a real backend. This is where the front-end gets its data from, through HTTP requests.
 
-## Development server
+## How to use it
+Run `npm run mock-backend` to start the backend. This will create a server running on `http://localhost:3000/`. It uses the data found in [mockdata.json](/mockdata.json).
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Run `npm run start` to start the webserver. Navigate to `http://localhost:4200/` to see the website.
 
-## Code scaffolding
+## Example
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+![Example](https://i.imgur.com/1RRrMEG.gif)
 
-## Build
+## Improvements
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+- More interesting charts. There is a lot more data than is shown in the user list.
+- A separate user page/popover. There is a lot of user data which would be interesting for the user to see.
+- Apparently `_gte` and `_tle` in json-server are for range. Not for comparisons. Which means that the results are not correct. If I were to fix this I would have to make my own backend queries in Express. But because the front-end is more important than the back-end in this assignment I chose to leave it the way it is now.
+- Input submitting could be more dynamic, instead of having to press enter it could easily do it on a value change. Or a simple button would work too.
+- Registered should be a date format by doing `new Date(user.registered)`.
+- The css is not consistent. Some lines dark gray while others are lighter
+- Chart text should be white.
+- Input "Up/Down" buttons should be hidden in balance inputs.
+- Caching of results resulting in less backend-calls (for better scaling).

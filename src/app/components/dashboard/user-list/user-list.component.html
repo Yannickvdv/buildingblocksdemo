@@ -10,7 +10,7 @@
   </thead>
   <tbody *ngIf="users && users.length > 0; else noUserFound">
     <tr *ngFor="let user of users">
-      <td>{{ user.name.first }} {{ user.name.second }}</td>
+      <td>{{ user.name.first }} {{ user.name.last }}</td>
       <td>€ {{ user.balance }}</td>
       <td>{{ user.gender }}</td>
       <td>{{ user.registered }}</td>
